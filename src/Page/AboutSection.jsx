@@ -1,6 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import Aboutsection from '../../assets/about-section.avif'
+import Aboutsection from '../assets/about-section.avif'
 
 
 export default function AboutSection() {
