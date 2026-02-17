@@ -1,4 +1,6 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
+import Electricimg from "../assets/chris-tree.avif"
+import Apllian from "../assets/tree-chris.avif"
 
 const christmasTreeService = {
   title: "Christmas Tree Disposal",
@@ -7,10 +9,9 @@ const christmasTreeService = {
   title4: "Eco-Friendly Disposal Solutions",
   title5: "Christmas Tree Disposal in Billings, MT",
 
-  images: [
-    "https://images.unsplash.com/photo-1608889175459-1f5b0d4c1c0b?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&w=1200&q=80"
+ images: [
+    Electricimg,
+    Apllian,
   ],
 
   description: `After the holidays, disposing of your Christmas tree can quickly become an inconvenience. Dry needles, heavy branches, and limited disposal options make removal more difficult than expected. LP Services Hauling & Installing offers reliable Christmas tree disposal in Billings, MT and nearby areas, making post-holiday cleanup simple and stress-free.`,

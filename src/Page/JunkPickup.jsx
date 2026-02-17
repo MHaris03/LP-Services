@@ -1,4 +1,6 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
+import Electricimg from "../assets/junk-disposal.webp"
+import Apllian from "../assets/junk-img.webp"
 
 const junkPickupService = {
   title: "Junk Pickup",
@@ -8,9 +10,8 @@ const junkPickupService = {
   title5: "Professional Junk Pickup in Billings, MT",
 
   images: [
-    "https://images.unsplash.com/photo-1597002976414-7d5f5c2b3b33?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1581574204181-c8f73b5f0b3f?auto=format&fit=crop&w=1200&q=80"
+    Electricimg,
+    Apllian,
   ],
 
   description: `Clearing unwanted clutter from your home or business can feel overwhelming. Whether you're dealing with old furniture, broken items, renovation debris, or general household junk, LP Services Hauling & Installing provides dependable junk pickup in Billings, MT and surrounding areas. We handle the heavy lifting, loading, and proper disposal so you don’t have to.`,

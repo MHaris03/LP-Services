@@ -1,4 +1,6 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
+import Electricimg from "../assets/electric.avif"
+import Apllian from "../assets/electronic.avif"
 
 const electronicService = {
   title: "Electronic Disposal",
@@ -8,9 +10,8 @@ const electronicService = {
   title5: "Reliable Electronic Disposal in Billings, MT",
 
   images: [
-    "https://images.unsplash.com/photo-1581092588427-1b3d9c4b6c1f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=1200&q=80"
+    Electricimg,
+    Apllian,
   ],
 
   description: `Proper electronic disposal is critical for protecting both the environment and your personal data. Old TVs, computers, printers, and other electronics contain materials that require special handling. LP Services Hauling & Installing provides safe, responsible e-waste removal in Billings, MT and surrounding areas. We ensure items are handled in accordance with local regulations and recycling standards.`,

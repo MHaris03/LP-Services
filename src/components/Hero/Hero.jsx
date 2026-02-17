@@ -1,4 +1,5 @@
 import { Phone, Star, ShieldCheck, BadgeCheck, Truck, Percent } from "lucide-react";
+import Heroimg from '../../assets/heroimg.avif'
 
 const features = [
     {
@@ -29,7 +30,7 @@ export default function Hero() {
             className="relative min-h-[95vh] flex items-center bg-cover bg-center"
             style={{
                 backgroundImage:
-                    "url('https://images.unsplash.com/photo-1600518464441-9154a4dea21b?q=80&w=2070&auto=format&fit=crop')",
+                    `url(${Heroimg})`,
             }}
         >
             {/* Dark Overlay */}

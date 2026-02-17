@@ -43,7 +43,7 @@ export default function ServiceDetailPage({ service }) {
 
           <div className="space-y-3">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-              Why Choose LP Services
+              Why Choose Us
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed">
               {service.paragraph2}

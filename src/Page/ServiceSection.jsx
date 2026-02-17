@@ -3,6 +3,7 @@ import Appliance from '../assets/appliance-removal-disposal.jpg'
 import Electronic from '../assets/disposal.png'
 import Junk from '../assets/junk-removal.jpg'
 import Tree from '../assets/tree.jpg'
+import Serviceimg from '../assets/service-img.avif'
 
 export default function ServicesSection() {
 
@@ -96,7 +97,7 @@ export default function ServicesSection() {
                         {/* LEFT IMAGE */}
                         <div className="relative">
                             <img
-                                src="https://images.unsplash.com/photo-1603796846097-bee99e4a601f?q=80&w=1974&auto=format&fit=crop"
+                                src={Serviceimg}
                                 alt="Professional hauling team"
                                 className="w-full h-full object-cover"
                             />

@@ -1,5 +1,7 @@
 import { CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import Aboutsection from '../../assets/about-section.avif'
+
 
 export default function AboutSection() {
   return (
@@ -15,7 +17,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="absolute -bottom-6 -right-6 w-full h-full bg-indigo-600 rounded-xl"></div>
             <img
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1974&auto=format&fit=crop"
+              src={Aboutsection}
               alt="Professional movers unloading truck"
               className="relative rounded-xl shadow-2xl w-full object-cover"
             />

@@ -1,4 +1,6 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
+import Electricimg from "../assets/Dumpster.avif"
+import Apllian from "../assets/rentel.avif"
 
 const dumpsterRentalService = {
   title: "Dumpster Rental",
@@ -7,11 +9,11 @@ const dumpsterRentalService = {
   title4: "Flexible Scheduling & Transparent Pricing",
   title5: "Reliable Dumpster Rental in Billings, MT",
 
-  images: [
-    "https://images.unsplash.com/photo-1597002964013-6c8d9b8b87b8?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1581091012184-5c3b6d2b1f0a?auto=format&fit=crop&w=1200&q=80"
-  ],
+   images: [
+      Electricimg,
+      Apllian,
+    ],
+  
 
   description: `Managing waste during a renovation, construction project, or large cleanout requires a dependable solution. LP Services Hauling & Installing offers convenient dumpster rental services in Billings, MT and surrounding areas. Whether you're tackling a home remodel or a commercial project, we provide the right container to keep your site organized and efficient.`,
 

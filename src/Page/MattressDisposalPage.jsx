@@ -1,4 +1,6 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
+import Electricimg from "../assets/Mattress-Disposal.webp"
+import Apllian from "../assets/Mattress.avif"
 
 const mattressService = {
   title: "Mattress Disposal",
@@ -8,9 +10,8 @@ const mattressService = {
   title5: "Professional Mattress Disposal in Billings, MT",
 
   images: [
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1582582621959-48d27397dc69?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80"
+    Electricimg,
+    Apllian,
   ],
 
   description: `Disposing of an old mattress can be more difficult than expected. Mattresses are bulky, heavy, and often difficult to transport without the right equipment. LP Services Hauling & Installing provides reliable mattress disposal in Billings, MT and surrounding areas, making removal simple and stress-free.`,

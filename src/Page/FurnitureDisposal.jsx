@@ -1,4 +1,6 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
+import Electricimg from "../assets/Furniture.avif"
+import Apllian from "../assets/Furniture-img.webp"
 
 const furnitureService = {
   title: "Furniture Disposal",
@@ -8,10 +10,9 @@ const furnitureService = {
   title5: "Reliable Furniture Disposal in Billings, MT",
 
   images: [
-    "https://images.unsplash.com/photo-1582582494700-3d3f9f0f2f9f?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1560185127-6ed189bf02f4?auto=format&fit=crop&w=1200&q=80",
-    "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80"
-  ],
+     Electricimg,
+     Apllian,
+   ],
 
   description: `Getting rid of old or unwanted furniture can be challenging, especially when dealing with heavy or bulky items. LP Services Hauling & Installing provides dependable furniture disposal in Billings, MT and surrounding areas. Whether you're replacing a single item or clearing out an entire property, our team ensures safe, efficient, and stress-free removal.`,
 
