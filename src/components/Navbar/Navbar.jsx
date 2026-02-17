@@ -9,12 +9,12 @@ export default function Navbar() {
 
   const services = [
     { title: "Appliance Disposal", slug: "appliance-disposal-billings-mt" },
-    { title: "Electronic Disposal", slug: "electronic-disposal" },
-    { title: "Junk Pickup", slug: "junk-pickup" },
-    { title: "Christmas Tree Disposal", slug: "christmas-tree-disposal" },
-    { title: "Furniture Disposal", slug: "furniture-disposal" },
-    { title: "Dumpster Rental", slug: "dumpster-rental" },
-    { title: "Mattress Disposal", slug: "mattress-disposal" },
+    { title: "Electronic Disposal", slug: "electronic-disposal-billings-mt" },
+    { title: "Junk Pickup", slug: "junk-pickup-billings-mt" },
+    { title: "Christmas Tree Disposal", slug: "christmas-tree-disposal-billings-mt" },
+    { title: "Furniture Disposal", slug: "furniture-disposal-billings-mt" },
+    { title: "Dumpster Rental", slug: "dumpster-rental-billings-mt" },
+    { title: "Mattress Disposal", slug: "mattress-disposal-billings-mt" },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-2">
             <Phone size={18} className="text-indigo-600" />
-            <span>(406) 698-1112</span>
+            <span>+1 406-698-1112</span>
           </div>
 
           <div className="flex items-center gap-2">
@@ -84,29 +84,32 @@ export default function Navbar() {
                 Services <ChevronDown size={16} />
               </div>
 
-              <div className="absolute top-8 left-0 bg-white text-gray-800 w-60 shadow-2xl rounded-lg p-4 space-y-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition">
+              <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 w-60 shadow-2xl rounded-lg p-4 space-y-2 
+  opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+  transition-all duration-200">
+
                 {services.map((service, i) => (
                   <NavLink
                     key={i}
                     to={`/${service.slug}`}
                     className={({ isActive }) =>
-                      `block text-sm font-medium transition ${isActive ? "text-yellow-400" : "text-gray-800 hover:text-yellow-400"
+                      `block text-sm font-medium transition ${isActive
+                        ? "text-yellow-400"
+                        : "text-gray-800 hover:text-yellow-400"
                       }`
                     }
-                    onClick={() => setOpen(false)} // optional: close dropdown after click
                   >
                     {service.title}
                   </NavLink>
                 ))}
               </div>
             </li>
-
             {[
-              { name: "Testimonials", path: "/" },
+              { name: "Testemonials", path: "/testemonials" },
               { name: "Gallery", path: "/gallery" },
-              { name: "Contact", path: "/" },
-              { name: "FAQ", path: "/" },
-              { name: "Blog", path: "/" },
+              { name: "Contact", path: "/contact-us" },
+              { name: "FAQ", path: "/faq" },
+              // { name: "Blog", path: "/blog" },
             ].map((item) => (
               <li key={item.name} className="relative cursor-pointer group">
                 <NavLink
@@ -142,12 +145,18 @@ export default function Navbar() {
             {[
               { name: "Home", path: "/" },
               { name: "About", path: "/about" },
-              { name: "Services", path: "/" },
-              { name: "Testimonials", path: "/" },
+              { name: "Appliance Disposal", path: "/appliance-disposal-billings-mt" },
+              { name: "Electronic Disposal", path: "/electronic-disposal-billings-mt" },
+              { name: "Junk Pickup", path: "/junk-pickup-billings-mt" },
+              { name: "Christmas Tree Disposal", path: "/christmas-tree-disposal-billings-mt" },
+              { name: "Furniture Disposal", path: "/furniture-disposal-billings-mt" },
+              { name: "Dumpster Rental", path: "/dumpster-rental-billings-mt" },
+              { name: "Mattress Disposal", path: "/mattress-disposal-billings-mt" },
+              { name: "Testimonials", path: "/testemonials" },
               { name: "Gallery", path: "/gallery" },
-              { name: "Contact", path: "/" },
-              { name: "FAQ", path: "" },
-              { name: "Blog", path: "/" },
+              { name: "Contact", path: "/contact-us" },
+              { name: "FAQ", path: "/faq" },
+              // { name: "Blog", path: "/blog" },
             ].map((item) => (
               <NavLink
                 key={item.name}

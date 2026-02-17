@@ -21,7 +21,7 @@ const applianceService = {
 
     paragraph4: `Our team is skilled, reliable, and prioritizes client satisfaction above all. Each member is trained in proper lifting techniques, safety procedures, and eco-friendly disposal methods. We aim to transform a potentially stressful task into a seamless experience. With well-equipped professionals and years of experience, we take pride in completing every pickup efficiently and responsibly.`,
 
-    paragraph5: `Billings, MT residents and nearby communities can trust LP Services for easy appliance disposal. We offer flexible scheduling, transparent pricing, and exceptional service. Call us today at (406) 698-1112 to schedule your appointment and enjoy stress-free, professional appliance removal. Let us help you clear space, recycle responsibly, and simplify your home upgrade process.`
+    paragraph5: `Billings, MT residents and nearby communities can trust LP Services for easy appliance disposal. We offer flexible scheduling, transparent pricing, and exceptional service. Call us today at +1 406-698-1112 to schedule your appointment and enjoy stress-free, professional appliance removal. Let us help you clear space, recycle responsibly, and simplify your home upgrade process.`
 };
 
 export default function AppliancePage() {

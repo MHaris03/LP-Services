@@ -12,7 +12,7 @@ export default function Contactus() {
           </h1>
           <p className="text-gray-700 text-lg">
             Billings, MT 59101<br/>
-            Phone: (406) 698-1112
+            Phone: +1 406-698-1112
           </p>
 
           {/* Services List as Themed Cards */}

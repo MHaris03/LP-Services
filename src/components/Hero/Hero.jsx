@@ -51,7 +51,7 @@ export default function Hero() {
                     <div className="flex flex-col sm:flex-row gap-4">
                         <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition">
                             <Phone size={18} />
-                            Call Now: (406) 698-1112
+                            Call Now: +1 406-698-1112
                         </button>
 
                         <button className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition">

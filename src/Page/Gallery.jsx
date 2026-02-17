@@ -1,93 +1,97 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-const galleryImages = Array.from(
+const images = Array.from(
     { length: 16 },
     (_, i) => `/Gallery/gallery (${i + 1}).webp`
 );
 
-export default function GalleryPage() {
-    const [selectedImg, setSelectedImg] = useState(null);
-    const [currentIndex, setCurrentIndex] = useState(0);
+export default function Gallery() {
+    const [open, setOpen] = useState(false);
+    const [current, setCurrent] = useState(0);
 
     const openImage = (index) => {
-        setCurrentIndex(index);
-        setSelectedImg(galleryImages[index]);
+        setCurrent(index);
+        setOpen(true);
     };
 
-    const showNext = (e) => {
-        e.stopPropagation(); // prevent closing lightbox
-        const nextIndex = (currentIndex + 1) % galleryImages.length;
-        setCurrentIndex(nextIndex);
-        setSelectedImg(galleryImages[nextIndex]);
-    };
+    const close = () => setOpen(false);
 
-    const showPrev = (e) => {
-        e.stopPropagation(); // prevent closing lightbox
-        const prevIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        setCurrentIndex(prevIndex);
-        setSelectedImg(galleryImages[prevIndex]);
-    };
+    const next = () =>
+        setCurrent((prev) => (prev + 1) % images.length);
 
+    const prev = () =>
+        setCurrent((prev) =>
+            prev === 0 ? images.length - 1 : prev - 1
+        );
 
     return (
-        <div className="bg-gray-50 min-h-screen px-4 py-12 md:px-8 lg:px-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-12">
-                Gallery
-            </h1>
+        <section className="py-24 bg-white">
+            <div className="max-w-7xl mx-auto px-6">
 
-            {/* Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                {galleryImages.map((img, idx) => (
-                    <div
-                        key={idx}
-                        className="overflow-hidden rounded-2xl shadow-lg cursor-pointer group"
-                        onClick={() => openImage(idx)}
-                    >
-                        <img
-                            src={img}
-                            alt={`Gallery ${idx + 1}`}
-                            className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                        />
-                    </div>
-                ))}
+                <div className="text-center max-w-3xl mx-auto mb-10">
+                    {/* <p className="text-[#e1921f] font-bold tracking-widest text-md mb-3">
+                        Gallery
+                    </p> */}
+
+                    {/* <h2 className="text-3xl md:text-4xl font-extrabold text-[#0b1d3a] leading-tight">
+                        Our {" "}
+                        <span className="text-[#e1921f]">Gallery</span>
+                    </h2> */}
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                        Our Gallery
+                    </h1>
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {images.map((img, index) => (
+                        <div
+                            key={index}
+                            className="overflow-hidden rounded-xl cursor-pointer group"
+                            onClick={() => openImage(index)}
+                        >
+                            <img
+                                src={img}
+                                alt=""
+                                className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
 
-            {/* Lightbox */}
-            {selectedImg && (
-                <div
-                    className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-2"
-                    onClick={() => setSelectedImg(null)}
-                >
-                    {/* Previous Button */}
+            {open && (
+                <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
+
                     <button
-                        onClick={showPrev}
-                        className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-4xl font-bold p-3 bg-black bg-opacity-40 rounded-full hover:bg-opacity-70 transition"
+                        onClick={close}
+                        className="absolute top-6 right-6 text-white hover:scale-110 transition"
                     >
-                        ‹
+                        <X size={36} />
                     </button>
 
-                    {/* Image */}
-                    <div className="relative w-full h-full flex items-center justify-center">
-                        <img
-                            src={selectedImg}
-                            alt={`Gallery ${currentIndex + 1}`}
-                            className="w-full h-full object-contain rounded-lg"
-                        />
-                        {/* Image counter */}
-                        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                            {currentIndex + 1} / {galleryImages.length}
-                        </div>
-                    </div>
-
-                    {/* Next Button */}
                     <button
-                        onClick={showNext}
-                        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-4xl font-bold p-3 bg-black bg-opacity-40 rounded-full hover:bg-opacity-70 transition"
+                        onClick={prev}
+                        className="absolute left-6 text-white hover:scale-110 transition"
                     >
-                        ›
+                        <ChevronLeft size={48} />
+                    </button>
+
+                    <img
+                        src={images[current]}
+                        alt=""
+                        onClick={next}
+                        className="w-full h-full object-contain cursor-pointer select-none"
+                    />
+
+                    <button
+                        onClick={next}
+                        className="absolute right-6 text-white hover:scale-110 transition"
+                    >
+                        <ChevronRight size={48} />
                     </button>
                 </div>
             )}
-        </div>
+        </section>
     );
 }
+
