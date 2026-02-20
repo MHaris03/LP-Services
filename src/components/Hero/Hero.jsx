@@ -1,5 +1,6 @@
 import { Phone, Star, ShieldCheck, BadgeCheck, Truck, Percent } from "lucide-react";
 import Heroimg from '../../assets/heroimg.avif'
+import { Link } from "react-router-dom";
 
 const features = [
     {
@@ -50,15 +51,23 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition">
+
+                        <a
+                            href="tel:+14066981112"
+                            className="bg-yellow-500 hover:bg-yellow-600 text-white text-black font-semibold px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition"
+                        >
                             <Phone size={18} />
                             Call Now: +1 406-698-1112
-                        </button>
+                        </a>
 
-                        <button className="bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition">
+                        <Link
+                            to="/testemonials"
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition"
+                        >
                             <Star size={18} />
                             Read Our Reviews
-                        </button>
+                        </Link>
+
                     </div>
                 </div>
             </div>
