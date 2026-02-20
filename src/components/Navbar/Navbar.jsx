@@ -28,10 +28,13 @@ export default function Navbar() {
             <span>Billings, MT 59101</span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <a
+            href="tel:+14066981112"
+            className="flex items-center gap-2 hover:text-indigo-600 transition-colors"
+          >
             <Phone size={18} className="text-indigo-600" />
             <span>+1 406-698-1112</span>
-          </div>
+          </a>
 
           <div className="flex items-center gap-2">
             <Clock size={18} className="text-indigo-600" />
