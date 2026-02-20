@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Phone, MapPin, Clock, ChevronDown } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import Logo from "../../assets/logo.png"
 
 
 export default function Navbar() {
@@ -49,11 +50,23 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
           {/* Logo */}
-          <NavLink to="/" className="text-2xl font-bold leading-tight tracking-wide">
-            LP Services
-            <span className="block text-base font-light text-yellow-400">
-              Hauling & Installing
-            </span>
+          <NavLink to="/" className="flex items-center gap-3">
+
+            <img
+              src={Logo}
+              alt="LP Services Hauling & Installing Logo"
+              className="w-14 h-14 object-contain transition-transform duration-300 hover:scale-105"
+            />
+
+            <div className="leading-tight">
+              <div className="text-2xl font-bold tracking-wide">
+                LP Services
+              </div>
+              <div className="text-base font-light text-yellow-400">
+                Hauling & Installing
+              </div>
+            </div>
+
           </NavLink>
 
           {/* Desktop Menu */}
