@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { NavLink } from "react-router-dom";
+import Logo from "../../assets/logo.png"
 
 export default function Footer() {
 
@@ -17,7 +18,12 @@ export default function Footer() {
 
         {/* Branding */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-gray-900">LP Services</h2>
+          {/* <h2 className="text-2xl font-bold text-gray-900">LP Services</h2> */}
+          <img
+            src={Logo}
+            alt="LP Services Logo"
+            className="h-32 w-32 object-contain"
+          />
           <p className="text-gray-700">
             Billings, MT 59101<br />
             Phone:{" "}
@@ -59,15 +65,17 @@ export default function Footer() {
         {/* Social & CTA */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-gray-900">Connect With Us</h3>
-          <div className="flex gap-4">
+          <div className="flex gap-2">
             <a href="https://www.facebook.com/LPSERVICESHAULINGJUNKREMOVEL" target="blank" className="hover:text-gray-900 transition">
               <Facebook size={24} />
             </a>
-            <a href="#" className="hover:text-gray-900 transition">
-              <Instagram size={24} />
-            </a>
-            <a href="#" className="hover:text-gray-900 transition">
-              <Linkedin size={24} />
+
+            <a class="social-icon socials-on hover:text-gray-900 transition"
+              href="https://maps.app.goo.gl/b5aV3N2QaTNMvBSQ8"
+              target="_blank"
+              rel="nofollow">
+
+              <i class="fa-brands fa-google outline-icon text-xl"></i>
             </a>
           </div>
           <button className="mt-4 bg-white text-gray-900 font-semibold px-6 py-3 rounded-xl shadow-md hover:bg-gray-100 transition">
@@ -78,8 +86,8 @@ export default function Footer() {
 
       {/* Bottom Divider */}
       <div className="border-t border-gray-300 mt-8">
-        <p className="text-center text-gray-500 text-sm py-4">
-          © {new Date().getFullYear()} LP Services. All rights reserved.
+        <p className="text-center text-gray-900 text-lg py-4">
+          © {new Date().getFullYear()} LP Services Hauling & Installing | Billings, MT 59101. All Rights Reserved.
         </p>
       </div>
     </footer>

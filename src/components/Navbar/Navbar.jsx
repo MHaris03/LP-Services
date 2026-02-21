@@ -121,7 +121,7 @@ export default function Navbar() {
               </div>
             </li>
             {[
-              { name: "Testemonials", path: "/testemonials" },
+              { name: "Testimonials", path: "/testimonials" },
               { name: "Gallery", path: "/gallery" },
               { name: "Contact", path: "/contact-us" },
               { name: "FAQ", path: "/faq" },
@@ -168,7 +168,7 @@ export default function Navbar() {
               { name: "Furniture Disposal", path: "/furniture-disposal-billings-mt" },
               { name: "Dumpster Rental", path: "/dumpster-rental-billings-mt" },
               { name: "Mattress Disposal", path: "/mattress-disposal-billings-mt" },
-              { name: "Testimonials", path: "/testemonials" },
+              { name: "Testimonials", path: "/testimonials" },
               { name: "Gallery", path: "/gallery" },
               { name: "Contact", path: "/contact-us" },
               { name: "FAQ", path: "/faq" },

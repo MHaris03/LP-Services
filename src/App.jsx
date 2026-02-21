@@ -31,7 +31,7 @@ function App() {
           <Route path="dumpster-rental-billings-mt" element={<DumpsterRentalPage />} />
           <Route path="mattress-disposal-billings-mt" element={<MattressDisposalPage />} />
           <Route path="gallery" element={<GalleryPage />} />
-          <Route path="testemonials" element={<TestimonialPage />} />
+          <Route path="testimonials" element={<TestimonialPage />} />
           <Route path="contact-us" element={<ContactPage />} />
           <Route path="faq" element={<FAQPage />} />
         </Route>

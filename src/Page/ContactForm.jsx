@@ -1,4 +1,4 @@
-import { Mail, Map, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -42,17 +42,28 @@ export default function ContactPage() {
                 <span className="font-semibold text-indigo-600">
                   <Phone />
                 </span>
-                <span>+1 406-698-1112</span>
+                <a
+                  href="tel:+14066981112"
+                  className="hover:text-indigo-600 transition"
+                >
+                  +1 406-698-1112
+                </a>
               </div>
+
               <div className="flex items-center gap-3">
                 <span className="font-semibold text-indigo-600">
                   <Mail />
                 </span>
-                <span>leroylpservices@gmail.com</span>
+                <a
+                  href="mailto:leroylpservices@gmail.com"
+                  className="hover:text-indigo-600 transition"
+                >
+                  leroylpservices@gmail.com
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-semibold text-indigo-600">
-                  <Map />
+                  <MapPin />
                 </span>
                 <span>Billings, MT 59101</span>
               </div>

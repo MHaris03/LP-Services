@@ -61,7 +61,7 @@ export default function Hero() {
                         </a>
 
                         <Link
-                            to="/testemonials"
+                            to="/testimonials"
                             className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 shadow-lg transition"
                         >
                             <Star size={18} />
