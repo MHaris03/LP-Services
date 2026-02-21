@@ -5,6 +5,8 @@ import Electronic from '../assets/disposal.png'
 import Junk from '../assets/junk-removal.jpg'
 import Tree from '../assets/tree.jpg'
 import Serviceimg from '../assets/service-img.avif'
+import Dumpster from "../assets/Dumpster-rental.avif"
+import Furnitur from "../assets/Furniture.webp"
 
 export default function ServicesSection() {
 
@@ -36,6 +38,20 @@ export default function ServicesSection() {
             description:
                 "Hassle-free post-holiday cleanup. We safely remove and recycle your Christmas tree so you don’t have to worry about disposal.",
             image: Tree,
+        },
+        {
+            title: "Furniture Disposal",
+            slug: "furniture-disposal-billings-mt",
+            description:
+                "Fast and reliable furniture removal services in Billings, MT. We handle sofas, mattresses, tables, dressers, and more, ensuring responsible disposal or recycling so you don’t have to lift a thing.",
+            image: Furnitur,
+        },
+        {
+            title: "Dumpster Rental",
+            slug: "dumpster-rental-billings-mt",
+            description:
+                "Affordable dumpster rentals in Billings, MT for home cleanouts, renovations, construction debris, and yard waste. Flexible rental periods and convenient drop-off and pickup included.",
+            image: Dumpster,
         },
     ];
 
@@ -75,15 +91,27 @@ export default function ServicesSection() {
 
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                                    {item.title}
+                                    <Link to={`/${item.slug}`}>
+                                        {item.title}
+                                    </Link>
                                 </h3>
                                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
                                     {item.description}
                                 </p>
 
                                 <Link to={`/${item.slug}`}>
-                                    <button className="text-indigo-600 font-semibold flex items-center gap-2 hover:gap-3 transition">
-                                        Learn More <ArrowRight size={16} />
+                                    <button
+                                        className="group inline-flex items-center gap-2 px-3 py-2.5 
+               border-2 border-indigo-600 text-indigo-600 
+               font-semibold rounded-full 
+               hover:bg-indigo-600 hover:text-white 
+               transition-all duration-300"
+                                    >
+                                        Learn More
+                                        <ArrowRight
+                                            size={18}
+                                            className="transition-transform duration-300 group-hover:translate-x-1"
+                                        />
                                     </button>
                                 </Link>
                             </div>
