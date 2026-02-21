@@ -1,4 +1,5 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import Appliance from '../assets/appliance-removal-disposal.jpg'
 import Electronic from '../assets/disposal.png'
 import Junk from '../assets/junk-removal.jpg'
@@ -10,31 +11,31 @@ export default function ServicesSection() {
     const services = [
         {
             title: "Appliance Disposal",
+            slug: "appliance-disposal-billings-mt",
             description:
                 "Safe and efficient removal of old refrigerators, washers, dryers, and other bulky appliances. We handle recycling and proper disposal.",
-            image:
-                Appliance,
+            image: Appliance,
         },
         {
             title: "Electronic Disposal",
+            slug: "electronic-disposal-billings-mt",
             description:
                 "Responsible e-waste disposal for computers, TVs, and office equipment. We follow environmentally safe recycling practices.",
-            image:
-                Electronic,
+            image: Electronic,
         },
         {
             title: "Junk Pickup",
+            slug: "junk-pickup-billings-mt",
             description:
                 "Quick removal of unwanted furniture, clutter, and debris. Perfect for home cleanouts and business spaces.",
-            image:
-                Junk,
+            image: Junk,
         },
         {
             title: "Christmas Tree Disposal",
+            slug: "christmas-tree-disposal-billings-mt",
             description:
-                " Hassle-free post-holiday cleanup. We safely remove and recycle your Christmas tree so you don’t have to worry about disposal.",
-            image:
-                Tree,
+                "Hassle-free post-holiday cleanup. We safely remove and recycle your Christmas tree so you don’t have to worry about disposal.",
+            image: Tree,
         },
     ];
 
@@ -80,9 +81,11 @@ export default function ServicesSection() {
                                     {item.description}
                                 </p>
 
-                                <button className="text-indigo-600 font-semibold flex items-center gap-2 hover:gap-3 transition">
-                                    Learn More <ArrowRight size={16} />
-                                </button>
+                                <Link to={`/${item.slug}`}>
+                                    <button className="text-indigo-600 font-semibold flex items-center gap-2 hover:gap-3 transition">
+                                        Learn More <ArrowRight size={16} />
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     ))}
