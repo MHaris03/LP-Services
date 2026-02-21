@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import useSeo from "../components/hooks/useSeo";
 
 const images = Array.from(
     { length: 16 },
@@ -24,6 +25,20 @@ export default function Gallery() {
         setCurrent((prev) =>
             prev === 0 ? images.length - 1 : prev - 1
         );
+
+    useSeo({
+        title:
+            "Project Gallery | LP Services Hauling & Installing in Billings, MT",
+        description:
+            "View our project gallery showcasing hauling, junk removal, dumpster rentals, and installation services in Billings, Montana. See the quality work completed by LP Services Hauling & Installing.",
+        keywords:
+            "Hauling projects Billings MT, Junk removal gallery Billings, Dumpster rental projects Montana, Installation services photos Billings, LP Services gallery",
+        canonical: "https://lpserviceshaulinginstalling.com/gallery",
+        author: "LP Services Hauling & Installing",
+        robots: "index, follow",
+        image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+        url: "https://lpserviceshaulinginstalling.com/gallery",
+    });
 
     return (
         <section className="py-24 bg-white">

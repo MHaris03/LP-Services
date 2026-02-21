@@ -1,8 +1,22 @@
 import React from "react";
 import Lorey from "../assets/Leroy-Pena.webp";
 import About from "../assets/about-us.webp";
+import useSeo from "../components/hooks/useSeo";
 
 export default function AboutUs() {
+    useSeo({
+        title:
+            "About LP Services Hauling & Installing | Trusted Hauling Experts in Billings, MT",
+        description:
+            "Learn more about LP Services Hauling & Installing, a locally trusted hauling and installation company serving Billings, Montana. Dedicated to reliable service, professionalism, and customer satisfaction.",
+        keywords:
+            "About LP Services Billings, Hauling company Billings MT, Local installation experts Montana, Trusted junk removal Billings, Professional hauling team Billings",
+        canonical: "https://lpserviceshaulinginstalling.com/about",
+        author: "LP Services Hauling & Installing",
+        robots: "index, follow",
+        image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+        url: "https://lpserviceshaulinginstalling.com/about",
+    });
     return (
         <section className="bg-gradient-to-r from-slate-50 via-blue-50 to-indigo-50 py-16 md:py-24 px-4 sm:px-6 md:px-12">
 

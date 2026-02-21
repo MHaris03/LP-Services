@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import useSeo from "../components/hooks/useSeo";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -21,7 +22,19 @@ export default function ContactPage() {
     setSubmitted(true);
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
-
+  useSeo({
+    title:
+      "Contact LP Services Hauling & Installing | Billings, MT Hauling & Removal",
+    description:
+      "Get in touch with LP Services Hauling & Installing in Billings, Montana. Call, email, or fill out our contact form for junk removal, hauling, dumpster rental, and installation services.",
+    keywords:
+      "Contact LP Services Billings MT, Hauling company contact Billings, Junk removal contact Montana, Dumpster rental inquiries Billings, Appliance and furniture disposal contact",
+    canonical: "https://lpserviceshaulinginstalling.com/contact-us",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/contact-us",
+  });
   return (
     <div className="min-h-screen bg-gray-50 py-16 px-6 md:px-16">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">

@@ -1,6 +1,7 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
 import Electricimg from "../assets/Furniture.avif"
 import Apllian from "../assets/Furniture-img.webp"
+import useSeo from "../components/hooks/useSeo";
 
 const furnitureService = {
   title: "Furniture Disposal",
@@ -10,9 +11,9 @@ const furnitureService = {
   title5: "Reliable Furniture Disposal in Billings, MT",
 
   images: [
-     Electricimg,
-     Apllian,
-   ],
+    Electricimg,
+    Apllian,
+  ],
 
   description: `Getting rid of old or unwanted furniture can be challenging, especially when dealing with heavy or bulky items. LP Services Hauling & Installing provides dependable furniture disposal in Billings, MT and surrounding areas. Whether you're replacing a single item or clearing out an entire property, our team ensures safe, efficient, and stress-free removal.`,
 
@@ -28,5 +29,18 @@ const furnitureService = {
 };
 
 export default function FurnitureDisposalPage() {
+  useSeo({
+    title:
+      "Furniture Disposal in Billings, MT | Sofa & Mattress Removal Services",
+    description:
+      "Professional furniture disposal in Billings, Montana. We remove sofas, mattresses, beds, tables, and more. Fast, affordable hauling services by LP Services Hauling & Installing.",
+    keywords:
+      "Furniture disposal Billings MT, Sofa removal Billings, Mattress disposal Billings Montana, Furniture hauling services Billings, Couch pickup Billings MT",
+    canonical: "https://lpserviceshaulinginstalling.com/furniture-disposal-billings-mt",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/furniture-disposal-billings-mt",
+  });
   return <ServiceDetailPage service={furnitureService} />;
 }

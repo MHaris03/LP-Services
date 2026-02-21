@@ -1,6 +1,7 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
 import Appliamceimg from "../assets/appliance.webp"
 import Apllian from "../assets/appliance-why.avif"
+import useSeo from "../components/hooks/useSeo";
 
 const applianceService = {
     title: "Appliance Disposal",
@@ -26,5 +27,19 @@ const applianceService = {
 };
 
 export default function AppliancePage() {
+    useSeo({
+        title:
+            "Appliance Disposal in Billings, MT | Refrigerator & Washer Removal Services",
+        description:
+            "Professional appliance disposal services in Billings, Montana. We remove refrigerators, washers, dryers, stoves, and more. Fast, affordable, and reliable hauling by LP Services Hauling & Installing.",
+        keywords:
+            "Appliance disposal Billings MT, Refrigerator removal Billings, Washer and dryer removal Montana, Stove disposal Billings, Appliance hauling services Billings",
+        canonical: "https://lpserviceshaulinginstalling.com/appliance-disposal-billings-mt",
+        author: "LP Services Hauling & Installing",
+        robots: "index, follow",
+        image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+        url: "https://lpserviceshaulinginstalling.com/appliance-disposal-billings-mt",
+    });
+
     return <ServiceDetailPage service={applianceService} />;
 }

@@ -1,6 +1,7 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
 import Electricimg from "../assets/Mattress-Disposal.webp"
 import Apllian from "../assets/Mattress.avif"
+import useSeo from "../components/hooks/useSeo";
 
 const mattressService = {
   title: "Mattress Disposal",
@@ -28,5 +29,18 @@ const mattressService = {
 };
 
 export default function MattressDisposalPage() {
+  useSeo({
+    title:
+      "Mattress Disposal in Billings, MT | Bed & Box Spring Removal Services",
+    description:
+      "Professional mattress disposal in Billings, Montana. We remove old mattresses, box springs, and bed frames quickly and safely. Affordable hauling services by LP Services Hauling & Installing.",
+    keywords:
+      "Mattress disposal Billings MT, Bed removal Billings Montana, Box spring removal Billings, Mattress pickup Billings MT, Furniture hauling services Billings",
+    canonical: "https://lpserviceshaulinginstalling.com/mattress-disposal-billings-mt",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/mattress-disposal-billings-mt",
+  });
   return <ServiceDetailPage service={mattressService} />;
 }

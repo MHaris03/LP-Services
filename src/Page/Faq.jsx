@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useSeo from "../components/hooks/useSeo";
 
 const faqData = [
   {
@@ -39,7 +40,19 @@ export default function FAQPage() {
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
+  useSeo({
+    title:
+      "FAQ | LP Services Hauling & Installing in Billings, MT – Junk Removal & Hauling",
+    description:
+      "Find answers to common questions about LP Services Hauling & Installing in Billings, Montana. Learn about junk removal, appliance disposal, dumpster rentals, and more.",
+    keywords:
+      "LP Services FAQ Billings MT, Junk removal questions Billings, Hauling service FAQs Montana, Dumpster rental FAQs Billings, Appliance disposal FAQ Billings",
+    canonical: "https://lpserviceshaulinginstalling.com/faq",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/faq",
+  });
   return (
     <div className="min-h-screen bg-gray-50 py-16 px-6 md:px-16">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">

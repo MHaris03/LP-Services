@@ -11,7 +11,7 @@ export default function Contactus() {
             LP Services Hauling & Installing
           </h1>
           <p className="text-gray-700 text-lg">
-            Billings, MT 59101<br/>
+            Billings, MT 59101<br />
             Phone: +1 406-698-1112
           </p>
 

@@ -1,6 +1,7 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
 import Electricimg from "../assets/chris-tree.avif"
 import Apllian from "../assets/tree-chris.avif"
+import useSeo from "../components/hooks/useSeo";
 
 const christmasTreeService = {
   title: "Christmas Tree Disposal",
@@ -9,7 +10,7 @@ const christmasTreeService = {
   title4: "Eco-Friendly Disposal Solutions",
   title5: "Christmas Tree Disposal in Billings, MT",
 
- images: [
+  images: [
     Electricimg,
     Apllian,
   ],
@@ -28,5 +29,18 @@ const christmasTreeService = {
 };
 
 export default function ChristmasTreePage() {
+  useSeo({
+    title:
+      "Christmas Tree Disposal in Billings, MT | Holiday Tree Removal Service",
+    description:
+      "Professional Christmas tree disposal in Billings, Montana. Fast and affordable holiday tree pickup and removal services by LP Services Hauling & Installing. Hassle-free cleanup after the holidays.",
+    keywords:
+      "Christmas tree disposal Billings MT, Tree removal after Christmas Billings, Holiday tree pickup Montana, Christmas tree hauling Billings, Seasonal junk removal Billings",
+    canonical: "https://lpserviceshaulinginstalling.com/christmas-tree-disposal-billings-mt",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/christmas-tree-disposal-billings-mt",
+  });
   return <ServiceDetailPage service={christmasTreeService} />;
 }

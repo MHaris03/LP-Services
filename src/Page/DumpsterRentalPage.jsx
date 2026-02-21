@@ -1,6 +1,7 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
 import Electricimg from "../assets/Dumpster.avif"
 import Apllian from "../assets/rentel.avif"
+import useSeo from "../components/hooks/useSeo";
 
 const dumpsterRentalService = {
   title: "Dumpster Rental",
@@ -9,11 +10,11 @@ const dumpsterRentalService = {
   title4: "Flexible Scheduling & Transparent Pricing",
   title5: "Reliable Dumpster Rental in Billings, MT",
 
-   images: [
-      Electricimg,
-      Apllian,
-    ],
-  
+  images: [
+    Electricimg,
+    Apllian,
+  ],
+
 
   description: `Managing waste during a renovation, construction project, or large cleanout requires a dependable solution. LP Services Hauling & Installing offers convenient dumpster rental services in Billings, MT and surrounding areas. Whether you're tackling a home remodel or a commercial project, we provide the right container to keep your site organized and efficient.`,
 
@@ -29,5 +30,18 @@ const dumpsterRentalService = {
 };
 
 export default function DumpsterRentalPage() {
+  useSeo({
+    title:
+      "Dumpster Rental in Billings, MT | Affordable Roll-Off Dumpster Services",
+    description:
+      "Affordable dumpster rental services in Billings, Montana. LP Services Hauling & Installing offers reliable roll-off dumpsters for home cleanouts, construction debris, and renovation projects.",
+    keywords:
+      "Dumpster rental Billings MT, Roll off dumpster Billings, Construction dumpster rental Montana, Residential dumpster Billings, Waste removal services Billings",
+    canonical: "https://lpserviceshaulinginstalling.com/dumpster-rental-billings-mt",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/dumpster-rental-billings-mt",
+  });
   return <ServiceDetailPage service={dumpsterRentalService} />;
 }

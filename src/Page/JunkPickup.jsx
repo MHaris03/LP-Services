@@ -1,6 +1,7 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
 import Electricimg from "../assets/junk-disposal.webp"
 import Apllian from "../assets/junk-img.webp"
+import useSeo from "../components/hooks/useSeo";
 
 const junkPickupService = {
   title: "Junk Pickup",
@@ -28,5 +29,18 @@ const junkPickupService = {
 };
 
 export default function JunkPickupPage() {
+  useSeo({
+    title:
+      "Junk Pickup in Billings, MT | Fast & Affordable Junk Removal Services",
+    description:
+      "Need junk pickup in Billings, Montana? LP Services Hauling & Installing provides fast, affordable junk removal for homes and businesses. We haul furniture, appliances, yard waste, and more.",
+    keywords:
+      "Junk pickup Billings MT, Junk removal Billings Montana, Furniture removal Billings, Local hauling services Billings, Residential junk pickup Billings",
+    canonical: "https://lpserviceshaulinginstalling.com/junk-pickup-billings-mt",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/junk-pickup-billings-mt",
+  });
   return <ServiceDetailPage service={junkPickupService} />;
 }

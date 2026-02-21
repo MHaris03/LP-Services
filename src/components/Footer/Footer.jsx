@@ -1,6 +1,13 @@
 import { Facebook, Instagram, Linkedin, ArrowRight } from "lucide-react";
 import { NavLink, Link } from "react-router-dom";
 import Logo from "../../assets/logo.png";
+import Visa from "../../assets/visa.jpg";
+import Master from "../../assets/mastercard.jpg";
+import Debit from "../../assets/debitCard.jpg";
+import Discover from "../../assets/discover.jpg";
+import Cash from "../../assets/cash.jpg";
+import Check from "../../assets/check.jpg";
+import Emerican from "../../assets/americanexpress.jpg"
 
 export default function Footer() {
 
@@ -115,7 +122,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Social + CTA */}
+        {/* Social + CTA + Payment */}
         <div>
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
             Connect With Us
@@ -151,11 +158,30 @@ export default function Footer() {
 
           <Link
             to="/contact-us"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-indigo-700 transition"
+            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-indigo-700 transition mb-6"
           >
             Get a Free Estimate
             <ArrowRight size={18} />
           </Link>
+
+          {/* Payment Accepted */}
+          <div className="mt-6">
+            <h4 className="text-md font-semibold text-gray-900 mb-2">
+              Payment Accepted
+            </h4>
+            <div className="flex gap-3 items-center">
+              <img src={Visa} alt="Visa" className="" />
+              <img src={Master} alt="Mastercard" className="" />
+              <img src={Emerican} alt="American Express" className="" />
+              <img src={Debit} alt="Debit Card" className="" />
+
+            </div>
+            <div className="flex gap-3 items-center mt-3">
+              <img src={Discover} alt="Discover" className="" />
+              <img src={Cash} alt="Cash" className="" />
+              <img src={Check} alt="Check" className="" />
+            </div>
+          </div>
         </div>
       </div>
 

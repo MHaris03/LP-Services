@@ -1,6 +1,7 @@
 import ServiceDetailPage from "../components/ServiceDetail/ServiceDetail";
 import Electricimg from "../assets/electric.avif"
 import Apllian from "../assets/electronic.avif"
+import useSeo from "../components/hooks/useSeo";
 
 const electronicService = {
   title: "Electronic Disposal",
@@ -28,5 +29,18 @@ const electronicService = {
 };
 
 export default function ElectronicPage() {
+  useSeo({
+    title:
+      "Electronic Disposal in Billings, MT | E-Waste & TV Removal Services",
+    description:
+      "Safe and reliable electronic disposal services in Billings, Montana. We remove TVs, computers, printers, and other e-waste responsibly. Fast pickup and professional hauling by LP Services Hauling & Installing.",
+    keywords:
+      "Electronic disposal Billings MT, E-waste removal Billings, TV disposal Billings Montana, Computer recycling Billings, Electronics hauling services Billings",
+    canonical: "https://lpserviceshaulinginstalling.com/electronic-disposal-billings-mt",
+    author: "LP Services Hauling & Installing",
+    robots: "index, follow",
+    image: "https://lpserviceshaulinginstalling.com/og-image.jpg",
+    url: "https://lpserviceshaulinginstalling.com/electronic-disposal-billings-mt",
+  });
   return <ServiceDetailPage service={electronicService} />;
 }
